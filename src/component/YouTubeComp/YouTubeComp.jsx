@@ -26,4 +26,9 @@ const YouTubeComp = (props) => {
     )
 }
 
+YouTubeComp.defaultProps = {
+    title: 'Card Default',
+    desc: 'Desc Default'
+}
+
 export default YouTubeComp;

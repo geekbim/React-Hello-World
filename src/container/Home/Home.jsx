@@ -11,6 +11,7 @@ class Home extends Component {
                 <YouTubeComp title="Card 3" desc="Desc 3" />
                 <YouTubeComp title="Card 4" desc="Desc 4" />
                 <YouTubeComp title="Card 5" desc="Desc 5" />
+                <YouTubeComp />
             </div>
         )
     }
