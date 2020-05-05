@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import YouTubeComp from '../../component/YouTubeComp/YouTubeComp';
-import '../../index.css';
+import './Home.css';
 
 class Home extends Component {
     render() {
