@@ -1,9 +1,5 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
-import { Card } from 'react-bootstrap';
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
+import { Button, Card, Container, Row, Col } from 'react-bootstrap';
 
 const YouTubeComp = (props) => {
     return (
