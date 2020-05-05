@@ -3,6 +3,24 @@ import {Navbar, Button, Row, Col, Card} from 'react-bootstrap'
 import './Product.css'
 
 export default class Product extends Component {
+    state = {
+        order: 0
+    }
+
+    handleMinus = () => {
+        if (this.state.order > 0) {
+            this.setState({
+                order: this.state.order - 1
+            })
+        }
+    }
+
+    handlePlus = () => {
+        this.setState({
+            order: this.state.order + 1
+        })
+    }
+
     render() {
         return (
             <div>
@@ -27,7 +45,7 @@ export default class Product extends Component {
                                     className="d-inline-block align-top mx-1"
                                     alt="React Bootstrap logo"
                                 />
-                                <Button variant="outline-dark" value={0}>0</Button>
+                                <Button variant="outline-dark" value={this.state.order}>{this.state.order}</Button>
                             </Navbar.Collapse>
                         </Navbar>
 
@@ -39,9 +57,9 @@ export default class Product extends Component {
                                     Rp. 31.500
                                 </Card.Title>
                                 
-                                <Button className="count-btn mx-1 ml-3" variant="primary">+</Button>
-                                <Button className="ml-1" variant="primary">Go somewhere</Button>
-                                <Button className="count-btn mx-1 ml-2" variant="primary">-</Button>
+                                <Button className="count-btn mx-1 ml-3" variant="primary" onClick={this.handleMinus}>-</Button>
+                                <Button className="ml-1 value-btn" variant="primary" value={this.state.order}>{this.state.order}</Button>
+                                <Button className="count-btn mx-1 ml-2" variant="primary" onClick={this.handlePlus}>+</Button>
                             </Card.Body>
                         </Card>
                     </Col>
